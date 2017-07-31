@@ -20,6 +20,7 @@ public class Hello {
         map.put(2,"hello");
         map.put(1,"world");
         map.put(3,"homie");
+        map.put(4,"fly");
         List<Map.Entry<Integer,String>> infolds = new ArrayList<>(map.entrySet());
 
         Collections.sort(infolds, new Comparator<Map.Entry<Integer, String>>() {
