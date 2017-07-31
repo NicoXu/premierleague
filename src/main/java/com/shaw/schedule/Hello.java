@@ -21,6 +21,7 @@ public class Hello {
         map.put(1,"world");
         map.put(3,"homie");
         map.put(4,"fly");
+        map.put(5,"away");
         List<Map.Entry<Integer,String>> infolds = new ArrayList<>(map.entrySet());
 
         Collections.sort(infolds, new Comparator<Map.Entry<Integer, String>>() {
