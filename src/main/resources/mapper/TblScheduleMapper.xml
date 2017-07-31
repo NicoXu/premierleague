@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shaw.schedule.mapper.TblScheduleMapper">
+
+    <resultMap id="BaseResultMap" type="com.shaw.entity.TblTeam">
+        <id column="team_id" property="teamId" jdbcType="BIGINT" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="getTeam" resultMap="BaseResultMap">
+        SELECT  * FROM tbl_team tt;
+    </select>
+</mapper>

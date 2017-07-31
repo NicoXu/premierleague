@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    name: premierleague
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/premierleague
+    username: root
+    password: gf2651956
+mybatis:
+  typeAliasesPackage : com.shaw.entity
+  mapperLocations: classpath:mapper/*.xml
+
+
+
+
