@@ -15,6 +15,16 @@ public class PageClientController {
         return "index";
     }
 
+    @RequestMapping(value = "/score")
+    public String toScore(){
+        return "score";
+    }
+
+    @RequestMapping(value = "/index")
+    public String index(){
+        return "index";
+    }
+
     @RequestMapping(value = "/login")
     public String toLogin(){
         return "login";

@@ -5,6 +5,7 @@
     <resultMap id="BaseResultMap" type="com.shaw.entity.TblTeam">
         <id column="team_id" property="teamId" jdbcType="BIGINT" />
         <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="city" property="city" jdbcType="VARCHAR"/>
     </resultMap>
 
     <select id="getTeam" resultMap="BaseResultMap">

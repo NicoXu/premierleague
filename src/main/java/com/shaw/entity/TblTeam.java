@@ -20,6 +20,11 @@ public class TblTeam {
      */
     private String name;
 
+    /**
+     * 所属城市
+     */
+    private String city;
+
     public int getTeamId() {
         return teamId;
     }
@@ -34,5 +39,13 @@ public class TblTeam {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 }

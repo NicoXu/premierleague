@@ -97,27 +97,27 @@
                 <li class="active">
                     <a href="index.html">
                         <i class="icon-dashboard"></i>
-                        <span class="menu-text"> 首页 </span>
+                        <span class="menu-text"> 球队 </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="dropdown-toggle">
+                    <a class="dropdown-toggle">
                         <i class="icon-list"></i>
-                        <span class="menu-text"> 表格 </span>
+                        <span class="menu-text"> 积分榜 </span>
 
                         <b class="arrow icon-angle-down"></b>
                     </a>
                     <ul class="submenu">
                         <li>
-                            <a href="#">
+                            <a href="score.html">
                                 <i class="icon-double-angle-right"></i>
-                                简单 &amp; 动态
+                                积分榜
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <i class="icon-double-angle-right"></i>
-                                jqGrid plugin
+                                射手榜
                             </a>
                         </li>
                     </ul>
@@ -190,10 +190,10 @@
 
                 <div class="nav-search" id="nav-search">
                     <form class="form-search">
-								<span class="input-icon">
-									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-									<i class="icon-search nav-search-icon"></i>
-								</span>
+						<span class="input-icon">
+							<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+							<i class="icon-search nav-search-icon"></i>
+						</span>
                     </form>
                 </div><!-- #nav-search -->
             </div>
@@ -211,6 +211,7 @@
                                 <tr ng-repeat="team in teams.list">
                                     <td>{{team.teamId}}</td>
                                     <td>{{team.name}}</td>
+                                    <td>{{team.city}}</td>
                                 </tr>
                             </tbody>
                         </table>
