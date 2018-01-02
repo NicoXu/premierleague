@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.shaw.schedule.mapper.TblScoreMapper">
+
+    <resultMap id="BaseResultMap" type="com.shaw.entity.TblScore">
+        <id column="score_id" property="scoreId" jdbcType="BIGINT" />
+        <id column="team_id" property="teamId" jdbcType="VARCHAR" />
+        <result column="team_name" property="teamName" jdbcType="VARCHAR" />
+        <result column="score" property="score" jdbcType="BIGINT"/>
+    </resultMap>
+
+    <select id="getScoreList" resultMap="BaseResultMap">
+        SELECT  * FROM tbl_score ts;
+    </select>
+</mapper>

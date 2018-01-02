@@ -200,18 +200,14 @@
 
             <div class="page-content">
                 <div class="row">
-                    <div class="col-xs-12" ng-app="myApp" ng-controller="myCtrl">
+                    <div class="col-xs-12">
                         <!-- PAGE CONTENT BEGINS -->
                         <div class="table-header">
-                            2017-2018英超联赛参赛球队
+                            2017-2018英超联赛积分榜
                         </div>
 
                         <table class="table table-bordered table-hover">
-                            <tbody>
-                            <tr ng-repeat="team in teams.list">
-                                <td>{{team.teamId}}</td>
-                                <td>{{team.name}}</td>
-                            </tr>
+                            <tbody id="scoreTbody">
                             </tbody>
                         </table>
                         <!-- PAGE CONTENT ENDS -->
@@ -287,7 +283,7 @@
 <script th:src="@{/assets/js/ace-elements.min.js}"></script>
 <script th:src="@{/assets/js/ace.min.js}"></script>
 <script th:src="@{/assets/js/angular.js}"></script>
-<script th:src="@{/angular/index.js}"></script>
+<script th:src="@{/angular/score.js}"></script>
 </body>
 </html>
 
