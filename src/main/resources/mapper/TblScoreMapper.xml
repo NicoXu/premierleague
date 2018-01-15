@@ -12,4 +12,8 @@
     <select id="getScoreList" resultMap="BaseResultMap">
         SELECT  * FROM tbl_score ts;
     </select>
+
+    <delete id="deleteScoreById" parameterType="int">
+        DELETE from tbl_score where score_id = #{scoreId};
+    </delete>
 </mapper>

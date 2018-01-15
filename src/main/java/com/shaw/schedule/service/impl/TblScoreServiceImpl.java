@@ -21,4 +21,9 @@ public class TblScoreServiceImpl implements TblScoreService{
     public List<TblScore> getScoreList() {
         return tblScoreMapper.getScoreList();
     }
+
+    @Override
+    public int deleteScoreById(int id) {
+        return tblScoreMapper.deleteScoreById(id);
+    }
 }

@@ -7,9 +7,7 @@ import com.shaw.entity.TblTeam;
 import com.shaw.schedule.service.TblScheduleService;
 import com.shaw.schedule.service.TblScoreService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,5 +44,11 @@ public class scheduleController {
         List<TblScore> list = tblScoreService.getScoreList();
         PageInfo<TblScore> pageInfo = new PageInfo<>(list);
         return pageInfo;
+    }
+
+    @RequestMapping(value = "/deleteScoreById", method = RequestMethod.POST)
+    public int deleteScoreById(@RequestParam String scoreId){
+        Integer id = Integer.valueOf(scoreId);
+        return tblScoreService.deleteScoreById(id);
     }
 }

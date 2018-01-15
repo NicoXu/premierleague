@@ -15,7 +15,6 @@
     <link th:href="@{/assets/css/ace.min.css}" rel="stylesheet"/>
     <link th:href="@{/assets/css/ace-rtl.min.css}" rel="stylesheet"/>
     <link th:href="@{/assets/css/ace-skins.min.css}" rel="stylesheet"/>
-    <script th:src="@{/assets/js/ace-extra.min.js}"></script>
 
 </head>
 
@@ -272,18 +271,51 @@
 
 <!-- basic scripts -->
 
-<!--[if !IE]> -->
+<!-- 删除模态框 -->
+<div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="cancelModalLabel">删除模态</h4>
+            </div>
+            <div class="modal-body">确认删除该数据？</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="cancelModalBtn">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+<!--新增模态框-->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="addModalLabel">新增模态</h4>
+            </div>
+            <div class="modal-body">
+                <label>球队</label><input type="text" placeholder="请输入球队名称"/>
+                <label>积分</label><input type="text" placeholder="请输入球队积分"/>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="addModalBtn">确认</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
 
 <script th:src="@{/assets/js/jquery-2.0.3.min.js}"></script>
-<!--<script type="text/javascript">-->
-<!--if("ontouchend" in document) document.write("<script th:src='@{assets/js/jquery.mobile.custom.min.js}'>"+"<"+"/script>");-->
-<!--</script>-->
 <script th:src="@{/assets/js/bootstrap.min.js}"></script>
 <script th:src="@{/assets/js/typeahead-bs2.min.js}"></script>
 <script th:src="@{/assets/js/ace-elements.min.js}"></script>
 <script th:src="@{/assets/js/ace.min.js}"></script>
 <script th:src="@{/assets/js/angular.js}"></script>
 <script th:src="@{/angular/score.js}"></script>
+<script th:src="@{/assets/js/ace-extra.min.js}"></script>
 </body>
 </html>
 

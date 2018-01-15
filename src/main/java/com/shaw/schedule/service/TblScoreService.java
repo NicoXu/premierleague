@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface TblScoreService {
     List<TblScore> getScoreList();
+    int deleteScoreById(int id);
 }

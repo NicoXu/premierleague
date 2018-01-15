@@ -12,4 +12,5 @@ import java.util.List;
 @Mapper
 public interface TblScoreMapper extends MyMapper<TblScore> {
     List<TblScore> getScoreList();
+    int deleteScoreById(int scoreId);
 }
